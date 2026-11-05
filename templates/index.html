@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090909">
+<title>MUTHU Downloader</title>
+<style>
+:root{color-scheme:dark;--red:#ff3038;--muted:#aaa}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -20%,#451014 0,transparent 48%),#090909;color:#f7f7f7;font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial}main{width:min(760px,92%);margin:48px auto}.brand{text-align:center;margin-bottom:26px}.logo{display:inline-grid;place-items:center;width:58px;height:58px;border-radius:18px;background:linear-gradient(145deg,#ff5058,#a9000a);font-size:26px;font-weight:900;box-shadow:0 8px 32px #ff303833}.brand h1{margin:12px 0 2px;letter-spacing:2px;font-size:clamp(27px,6vw,38px)}.brand h1 span{color:var(--red)}.brand p{color:var(--muted);margin:0}.card{background:linear-gradient(145deg,#191919,#101010);border:1px solid #303030;border-radius:22px;padding:clamp(18px,4vw,30px);box-shadow:0 20px 70px #0008}label{display:block;font-weight:650;margin:0 0 9px}input{width:100%;background:#080808;border:1px solid #3a3a3a;color:white;border-radius:12px;padding:15px;font:inherit;outline:none}input:focus{border-color:var(--red);box-shadow:0 0 0 3px #ff303822}button{border:0;border-radius:12px;padding:14px 18px;background:var(--red);color:white;font:700 15px system-ui;cursor:pointer;width:100%;margin-top:12px}button:disabled{opacity:.55;cursor:wait}.help{color:var(--muted);font-size:13px;margin:9px 0 0}.notice{margin-top:18px;padding:13px 15px;border-left:3px solid var(--red);background:#211113;border-radius:8px;color:#e8d6d6;font-size:13px}.status{margin-top:14px;min-height:24px;color:#ffb3b6;font-size:14px;overflow-wrap:anywhere}.status.ok{color:#9fe6b0}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}.feature{border:1px solid #292929;background:#101010;border-radius:12px;padding:12px;text-align:center;color:#ccc;font-size:13px}.feature b{display:block;color:#fff;font-size:14px;margin-bottom:3px}footer{text-align:center;color:#777;font-size:12px;margin:22px 0}@media(max-width:560px){main{margin:28px auto}.features{grid-template-columns:1fr}}
+</style></head>
+<body><main>
+<header class="brand"><div class="logo">M</div><h1>MUTHU <span>DOWNLOADER</span></h1><p>Direct media downloads · MP4 · MP3 · More</p></header>
+<section class="card">
+<form method="post" action="/download">
+<label for="url">Paste a direct media-file URL</label>
+<input id="url" name="url" type="url" inputmode="url" placeholder="https://example.com/video.mp4" autocomplete="url" required>
+<p class="help">Supported direct files: MP4, M4V, MOV, WebM, MKV, MP3, M4A, AAC, OGG, WAV and FLAC.</p>
+<button type="submit">⬇ Download file</button>
+</form>
+<div id="status" class="status" role="status" aria-live="polite">When you submit, your browser will receive the file as a download if the source allows it.</div>
+<div class="notice"><b>Use responsibly:</b> This service fetches direct media-file URLs only. Use links you own or are authorized to download. It does not extract YouTube pages, bypass DRM, login walls, or site restrictions. Some hosts block server-side requests. Free Render instances may sleep and have resource limits.</div>
+</section>
+<div class="features"><div class="feature"><b>Direct download</b>Server streams the file</div><div class="feature"><b>Mobile ready</b>Phone & desktop</div><div class="feature"><b>Private by design</b>No user account stored</div></div>
+<footer>© <span id="year"></span> MUTHU TECH</footer></main>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script></body></html>
